@@ -5,7 +5,7 @@ services:
     image: caddy:latest
     volumes:
       - "./:/code"
-      - "Caddyfile:/etc/caddy/Caddyfile"
+      - "./Caddyfile:/etc/caddy/Caddyfile"
     ports:
       - 80:80
       - 443:443
