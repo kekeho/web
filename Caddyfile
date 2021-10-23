@@ -1,0 +1,10 @@
+kekeho.net {
+	redir https://www.kekeho.net{uri}
+}
+
+www.kekeho.net {
+	encode zstd gzip
+
+	root * /code/front
+	file_server
+}
