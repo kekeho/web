@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    background-color: #333333;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .title h1 {
+    margin: 0;
+}
+
+header nav .title h1 a {
+    color: #ffffff;
+    margin: 0;
+    text-decoration: none;
+}
+
+header nav ul {
+    display: block;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
