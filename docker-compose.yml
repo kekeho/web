@@ -9,3 +9,12 @@ services:
     ports:
       - 80:80
       - 443:443
+  
+  vpn:
+    image: hwdsl2/ipsec-vpn-server
+    privileged: true
+    ports:
+      - "500:500/udp"
+      - "4500:4500/udp"
+    env_file:
+      - ./vpn.env
