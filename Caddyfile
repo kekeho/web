@@ -2,9 +2,42 @@ kekeho.net {
 	redir https://www.kekeho.net{uri}
 }
 
+
+tatoo.kekeho.net {
+	redir https://tattoo.kekeho.net{uri}
+}
+
+
+tattoo.kekeho.net {
+	encode zstd gzip
+
+	root * /code/withcocoro
+	file_server
+}
+
+tatoo.cocopi.net {
+	redir https://pwapwa.cocopi.net{uri}
+}
+
+
+pwapwa.cocopi.net {
+	encode zstd gzip
+
+	root * /code/withcocoro
+	file_server
+}
+
 www.kekeho.net {
 	encode zstd gzip
 
 	root * /code/front
 	file_server
+
+	basicauth /secret/mitou22/* {
+		mitou22 JDJhJDE0JHY2MTZ6dU5MVVlUeDlBVWlMdEg3TS5SWkgwaENKSm9QWHRRLmVGS1gvRUJaMnZkVTRSa3JT
+	}
+
+	basicauth /secret/hardcorebank-slides/* {
+		hardcorebank JDJhJDE0JGptWEdwZEtrS1lyVmh5TVJ2UTNEUi5rV2VRSDdkVFJDR3JidjNSQXhkZVRURy5IeTgvZWpD
+	}
 }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haiku | kekeho</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <main>
+        <h1>Haiku</h1>
+
+        適当に　自由に詠んで　いきたいワ
+
+        <ol id="haiku" reversed>
+            <li>いぬ散歩　春の訪れ　感じます</li>
+            <li>花粉　殺す　絶対</li>
+            <li>成果はね　そこになければ　ないですね</li>
+            <li>いい加減　ワイのブログも　セルフホスト(したいな)</li>
+            <li>恋人に　褒めてもらえて　うれしいワン！🐶</li>
+            <li>古鯖や　データ消えゆく　ビープ音</li>
+            <li>ブリ食し　気分は上々　ブリリアント</li>
+            <li>大学は　デカい学びを　するところ</li>
+            <li>もうオワリ　インターネットを　やめましょう</li>
+        </ul>
+    </main>
+
+    <footer>
+        詠んだ人: <a href="https://kekeho.net">kekeho</a>
+    </footer>
+
+    <script>
+        let haikuListE = document.getElementById("haiku");
+        let haikuList = haikuListE.getElementsByTagName("li");
+        haikuListE.setAttribute("start", String(haikuList.length - 1));
+
+        function focusColor(haikuId) {
+            for (let i = 0; i < haikuList.length; i++) {
+                let haiku = haikuList[i];
+
+                // Focus
+                if ("#" + haiku.id === haikuId) {
+                    haiku.classList.add("selected");
+                } else {
+                    haiku.classList.remove("selected");
+                }
+            }
+        }
+
+        for (let i = 0; i < haikuList.length; i++) {
+            let haiku = haikuList[i];
+            let haikuId = String(haikuList.length - 1 - i)
+            
+            haiku.id = haikuList.length - 1 - i;
+            let haikuText = haiku.innerText;
+
+            // Set Link
+            let linkE = document.createElement("a");
+            linkE.setAttribute("href", "#" + haikuId);
+            linkE.setAttribute("title", "リンクをコピー");
+            linkE.innerHTML = "🔗";
+            linkE.onclick = () => {
+                navigator.clipboard.writeText("https://kekeho.net/575.html#" + haikuId);
+                focusColor("#" + haikuId);
+            }
+            haiku.appendChild(linkE);
+
+            if (navigator.canShare) {
+                let shareE = document.createElement("span");
+                shareE.innerHTML = "📤";
+                shareE.onclick = () => {
+                    // share button
+                    navigator.share({                        
+                        title: "Haiku | kekeho.net",
+                        text: haikuText + " by kekeho",
+                        url: "https://kekeho.net/575.html#" + haikuId,
+                    });
+                }
+                haiku.appendChild(shareE);
+            }
+        }
+
+        focusColor(location.hash);
+    </script>
+    
+</body>
+</html>

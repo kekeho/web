@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/kekeho
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.kekeho.net
+  * I am kekeho (https://keybase.io/kekeho) on keybase.
+  * I have a public key ASBTLFGQ3STkyM92FBK42yRgX3mEFW5oy6YNvtmnAqFyOwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010127b3399bf2a22d9979355e270817af7fd460ab804253f4540119140077227a110a",
+      "host": "keybase.io",
+      "kid": "0120532c5190dd24e4c8cf761412b8db24605f7984156e68cba60dbed9a702a1723b0a",
+      "uid": "14989ee4a51d03f7805a36fda048b819",
+      "username": "kekeho"
+    },
+    "merkle_root": {
+      "ctime": 1662882133,
+      "hash": "ebefd2ca3d4d31025722e61eb55da8c99c8bf9e89a3de31fbd20dac7bfed210bcb7e91463e4219468ba81cd6b800a91f8e0e21d1e6f115fd38bd3a1887d5bb98",
+      "hash_meta": "4b17089198b763489bbb21f02edab2ef72a7ed8537ce783a4b2ebbecbb31cb53",
+      "seqno": 23175985
+    },
+    "service": {
+      "entropy": "hyMxJWdUtaPb5m65Dz1YB/WO",
+      "hostname": "www.kekeho.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.1"
+  },
+  "ctime": 1662882377,
+  "expire_in": 504576000,
+  "prev": "cc4048cfc44609b3e35acf3e34a81f1fea119a82a69906b79995b79e7f1e923d",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgUyxRkN0k5MjPdhQSuNskYF95hBVuaMumDb7ZpwKhcjsKp3BheWxvYWTESpcCBsQgzEBIz8RGCbPjWs8+NKgfH+oRmoKmmQa3mZW3nn8ekj3EIFndE+uj5K8+EN3rqdZpY4DNj3bEvQG6PQLOST+wl/L7AgHCo3NpZ8RAQrDRTPofbO83sb8h/c2fzw1uj/QbqW3uhXlYU6vyCvym5eXbo24Cp8a7NxSv62SlMspVq3QDDCJFUsZU/L9XAKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIO+XixyLos1HvPfn6ThrzEhL828rW1L8MeHD/PtN4z1po3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kekeho
+
+==================================================================

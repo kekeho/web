@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ペアタトゥーの設計と実装</title>
+</head>
+
+<body>
+
+<style>
+    body {
+        font-size: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    img {
+        max-width: 100%;
+    }
+</style>
+
+<h1>ペアタトゥーの設計と実装</h1>
+<p>
+    2023年1月末に、パートナーとのペアタトゥーを入れた。
+</p>
+
+<section>
+    <h2>設計の流れ</h2>
+    <p>
+        絵柄を選定するに当たって、ふたりでInstagramやPinterestなどを漁り、8bit調の<a href="https://www.instagram.com/explore/tags/pixeltattoo/">Pixel Tatoo</a>系がよいのではないかということになった。
+        <br />
+        具体的な絵柄としては、ハートマーク・吹き出しの中にハートマーク・バブル・QRコードなどが候補として挙がった。
+    </p>
+
+    <p>
+        最終的に、QRコードの中央にハートマークを入れることになった。
+    </p>
+
+    <p>
+        もともと二人で同じURLを彫ることも考えていたが、その場合別れた際のドメイン管理が困難であると予想される。
+        <br />
+        例えば、二人で"alice-bob.net"を彫ったあと別れ、パートナーにドメイン管理権を譲渡した場合を考えてみよう。パートナーが悪意を持っていた場合、自分の体のQRコードをスキャンすると不適切なサイト(アダルトサイトなど)へ飛ばされてしまう可能性がある。
+        <br />
+        そこでQRコードに彫るドメインは各自が管理している別々のものとし、指し示すIPアドレスを同じにすることにした。
+        <br />
+        こうすることでスキャンしたあとに閲覧できるWEBサイトも同じにできるし、なにより「二人が見ている方向が一緒」ということでロマンチック性を担保できる。
+        <br />
+        万が一別れた場合でも、指し示すIPアドレスをお互いに変更すれば、ペアタトゥーとしての機能は失われ、ただのタトゥーとなる。これにより、「別れた後のペアタトゥーはイタい」というリスクを回避している。
+    </p>
+
+    <p>
+        結果的に、私のQRコードは"https://tatoo.kekeho.net"を、相手のQRコードは"https://tatoo.cocopi.net"をエンコードしたものとした。
+        <br />
+        中央にハートマークを入れるため、QRコードの誤り訂正レベルはQ(25%)とした。
+    </p>
+
+    <p>
+        彫る場所は前腕部(内側)とした。
+        長袖や七分丈を着ていれば隠れるため、ある程度TPOに合わせることが可能と判断した。
+    </p>
+</section>
+
+<section>
+    <h2>実装</h2>
+    <p>
+        Pixel Tatooの実績が豊富なタトゥーアーティストである、<a href="https://www.instagram.com/88world.co.kr/">88world</a>さんに彫っていただいた。
+        <br />
+        88worldさんは大変やさしい方で、丁寧な仕事ぶりであった。
+        歪みのないQRコードを彫っていただくことができた。
+    </p>
+
+    <p>
+        QRコードを読み込んだ後に表示されるWebサイトは、まだ実装途中である。
+        デコってオシャレにしたいと考えている。
+    </p>
+</section>
+
+
+<section>
+    <h2>結果</h2>
+
+    <div>
+        <img src="/assets/img/tatoo.png" alt="ツーショット" width="500px">
+        <p>ツーショット1</p>
+    </div>
+
+    <div>
+        <img src="/assets/img/tatoo1.png" alt="" width="500px">
+        <p>ツーショット2</p>
+    </div>
+
+    <div>
+        <img src="/assets/img/tatoo-dig.png" alt="digの結果" width="500px">
+        <p>タトゥーのQRコードをスキャンして得られるドメインの名前解決をした結果</p>
+    </div>
+
+</sectipon>
+
+
+<section>
+    <h2>おわりに</h2>
+    <p>
+        とても満足している。道端で僕を見かけた方は、僕の腕をスキャンして遊んでください。
+    </p>
+</section>
+
+</body>
+
+</html>
